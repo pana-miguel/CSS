@@ -1,0 +1,81 @@
+// Variables
+
+$color_principal: #ccc;
+$color-letra: #3680cb;
+
+body{
+    background: $color-principal;
+}
+
+h1{
+    color: $color-letra;
+}
+
+.caja{
+    h2{
+        color: black;
+    }
+    p{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+// Funciones
+
+@mixin caja_perzonaliza($fondo:red) {
+    background-color: $fondo;
+    border: 5px solid black;
+}
+
+.caja{
+    @include caja_perzonaliza();
+}
+
+// Flujos de Control
+
+    // For
+@for $i from i through 3{
+    ul:nth-child(3n+ #{$i}){
+        background-color: lighten($color_principal,$i*5%);
+    }
+}
+
+// Definicion de breakpoints - mapa
+
+$breakpoints :(
+    sm: 540px,
+    md: 778px,
+    lg: 1024px,
+);
+
+//Mixin RWD
+
+@mixin media-up($breakpoint){
+    // validacion de mapa breakpoint
+    @if map-has-key($breakpoints,$breakpoint){
+        // Media Query
+        @media screen and(min-width: map-get($breakpoints, $breakpoint)){
+            @content;
+        }
+    } @else{
+        @warn "El valor del breakpoint '#{$breakpoint}' no existe";
+    }
+    
+}
+
+
+.box{
+    background: #dfe;
+    margin-inline: 5px;
+
+    // incluimos los media query para cada resulucion
+    @include media-up(sm){
+        background-color : $color-letra;
+    }
+    @include media-up(md){
+        background-color : $color-letra;
+    }
+    @include media-up(lg){
+        background-color : $color-letra;
+    }
+}

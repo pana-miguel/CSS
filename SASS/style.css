@@ -1,0 +1,19 @@
+body {
+  background: #ccc;
+}
+
+h1 {
+  color: #3680cb;
+}
+
+.caja h2 {
+  color: black;
+}
+.caja p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.caja {
+  background-color: red;
+  border: 5px solid black;
+}/*# sourceMappingURL=style.css.map */
