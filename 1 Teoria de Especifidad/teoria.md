@@ -4,18 +4,18 @@ La teoria de especificidad nos dice que cuanto mas arriba este el indicador de e
 
 * elementos y pseudo-elementos son la primera clase baja
 
-  ```
+  ```css
   div{
     atributo: propiedad;
   }
 
-  selector::pseudo-element {
+  .selector::pseudo-element {
     property: value;
   }
   ```
 * el segundo rango de importacia; aca estan las clases, pseudo-clases, atributos.
 
-  ```
+  ```css
   .miClase{
     propiedad: valor;
   }
@@ -28,6 +28,6 @@ La teoria de especificidad nos dice que cuanto mas arriba este el indicador de e
   ```
 * depues tenemos a los estilos por id, estos estilos se le asignnan a un unico elemento html.
 * casi ya para terminar tenemos los estilo en linea, que se implementan en tl mismo html usando el atributo style = "".
-* y por ultimo nivel, el mas poderoso, es el !importan, esta palabra se usa al final de un estilo, le da la maxima importancia,, asi este en el nivel mas bajo. 
+* y por ultimo nivel, el mas poderoso, es el !importan, esta palabra se usa al final de un estilo, le da la maxima importancia,, asi este en el nivel mas bajo.
 
 ![](assets/20230608_211924_image.png)
