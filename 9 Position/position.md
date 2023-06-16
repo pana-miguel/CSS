@@ -28,5 +28,53 @@ la propiedad position que se utiliza para saber la posicion de una caja, exiten 
   ![1686872825810](image/position/1686872825810.png)
 * absolute:
 
-  El valor absolutese coloca en relacion de la caja padre contenedor, en lugar de posicionarse en relacion con la ventana grafica lo hace con la caja contenedora.
-* sticky
+  El valor absolute se coloca en relacion a la anterior caja, el elemento es removido del flujo del DOM; es como un relative fucionado con fixed; en resume la caja dejara de ocupar su espacio y pasara a quedar fijo en un lugar con las propiedades top, right, bottom, y left.
+
+  ```css
+  mi-elemento{
+  	position: absolute;
+  	top: 40px;
+  	left: 50px;
+  	background: red;
+  }
+  ```
+* sticky: (experimental, se espera que en un futuro cambie)
+
+  Esta propiedad nos da una conbinacion entre 'relative' y 'fixed', que solo desplaza como un 'fixed' en su caja contenedora, de ahi se comporta como un 'relative'.
+
+  ```css
+  mi-element{
+  	position: sticky;
+  	top: 0;
+  	background-color: green;
+  }
+  ```
+
+  ![1686890345270](image/position/1686890345270.png)
+
+## Z INDEX
+
+El 'z-index' nos sirve para poder ordenar elementos superposiciones uno detras de otros, esta propiedad nos ayudara a darle un orden segun el valor que le dasmos.
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>This is a heading</h1>
+	<img src="img_tree.png">
+	<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+</body>
+</html>
+
+```
+
+```css
+img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+ 	z-index: -1;
+}
+```
+
+![1686891666625](image/position/1686891666625.png)
