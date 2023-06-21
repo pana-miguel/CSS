@@ -6,10 +6,10 @@ Otra cosa es que solo funciona en los elementos de tipo 'block' y 'inline-block'
 
 Los pseudoelementos que tenemos son:
 
+* ::first-line
+* ::first-letter
+* ::placeholder (Experimental)
+* ::selection
 * ::after
 * ::before
-* ::first-letter
-* ::first-line
-* ::selection
 * ::backdrop
-* ::placeholder (Experimental)
