@@ -54,7 +54,7 @@ la propiedad position que se utiliza para saber la posicion de una caja, exiten 
 
 ## Z INDEX
 
-El 'z-index' nos sirve para poder ordenar elementos superposiciones uno detras de otros, esta propiedad nos ayudara a darle un orden segun el valor que le dasmos.
+El 'z-index' nos sirve para poder ordenar elementos superposicionados uno detras de otros, esta propiedad nos ayudara a darle un orden segun el valor que le dasmos.
 
 ```html
 <!DOCTYPE html>
